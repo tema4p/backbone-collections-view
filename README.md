@@ -7,4 +7,4 @@ Backbone.JS Collection &amp; Views Краткий урок и быстрый с�
 
 http://www.it4p.ru
 
-http://youtu.be/foeDH4PkPoA
+http://youtu.be/afXPtUw2Knk
