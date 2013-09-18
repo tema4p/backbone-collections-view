@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Backbone collections</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="hero-unit span8" id="rockets"></div>
+    <div class="hero-unit span8" id="rockets2"></div>
+    <div class="hero-unit span8" id="rockets3"></div>
+</div>
+
+<script type="text/template" id="viewRockets">
+    <h2>My Rockets</h2>
+    <button class="btn btn-success addObject">add one</button>
+    <button class="btn btn-info toJSON">to JSON</button>
+    <table class="table table-striped">
+        <thead>
+        <th data-sort="name">Name</th>
+        <th data-sort="size">Size</th>
+        <th data-sort="description">Description</th>
+        <th>Actions</th>
+        </thead>
+        <tbody class="rocketsList"></tbody>
+    </table>
+    <div class="rocketsTotal">
+        Total items: <span class="rockets-count">0</span>
+        Total size: <span class="rockets-size">0</span>
+    </div>
+    <pre class="json-out"></pre>
+</script>
+
+<script type="text/template" id="viewRocket">
+    <td class="name" contenteditable="true"><%- name %></td>
+    <td class="size form-horizontal">
+        <button data-rel="-10" class="changeSize btn btn-small btn-primary">-</button>
+        <input class="size" type="number" value="<%- size %>" style="width: 40px;">
+        <button data-rel="10" class="changeSize btn btn-small btn-success">+</button>
+    </td>
+    <td class="desc" contenteditable="true"><%- description %></td>
+    <td>
+        <button class="deleteRow btn btn-small btn-danger"><i class="icon-remove icon-white">X</i></button>
+    </td>
+</script>
+
+</body>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/underscore.js"></script>
+<script src="assets/js/backbone.js"></script>
+<script src="models/ModelRocket.js"></script>
+<script src="views/ViewRocket.js"></script>
+<script src="views/ViewRockets.js"></script>
+<script src="main.js"></script>
+</html>
