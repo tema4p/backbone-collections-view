@@ -20,4 +20,6 @@ $(function () {
         }
     }
 
+    $('#rockets').rocket('create');
+
 });
