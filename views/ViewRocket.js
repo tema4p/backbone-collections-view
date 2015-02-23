@@ -39,7 +39,7 @@ var RocketView = Backbone.View.extend({
         var size = this.model.get('size');
         var res = this.model.set({
             size: size+diff
-        });
+        },{validate: true});
         if (!res) this.render();
     }
 });
